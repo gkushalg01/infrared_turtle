@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>ir_turtle</name>
-  <version>0.0.0</version>
+  <version>1.0.0</version>
   <description>The ir_turtle package</description>
 
-  <maintainer email="kush@todo.todo">kush</maintainer>
+  <maintainer email="gkushalg01@gmail.com">Kushal Ghosh</maintainer>
 
 
   <license>TODO</license>
