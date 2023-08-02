@@ -24,17 +24,16 @@ Arduino 1.8
 
 ## how to run?  
 
-1) Install the above system
-2) git clone this repo
+1) Install the above system Requirements
+2) Clone this git repo
 3) Perform a `catkin_make` inside the catkin_ws directory
-4) Connect IR to arduino UNO and UNO to System. Make sure it is connected by typing `ll /dev/ttyACM0`, if its not present there, please look up on the internet.
+4) Connect IR to Arduino UNO to System. Make sure it is connected by typing `ll /dev/ttyACM0`, if its not present there, please look up on the internet.
 5) Install the code in .ino file on your Arduino
 6) If all the above steps are done correctly, you can simple run the script
    ```bash run_ir_turtle.sh```
    
-Now you can see a result similar to the video below:  
 ### Video
-
+(to be uploaded)
 
 ### STEP TO MAKE THIS PROJECT:  
 
@@ -44,8 +43,8 @@ ll /dev/ttyACM0
 sudo chmod a+rw /dev/ttyACM0  
 ```
 IR Pin number used in this case is 4.  
-(_/) Copy the code in ir_publisher.ino & Feed the code in ir_publisher.ino to Arduino.  
-(_/) Install rosserial and make necessary configurations -  
+( a ) Copy the code in ir_publisher.ino & Feed the code in ir_publisher.ino to Arduino.  
+( b ) Install rosserial and make necessary configurations -  
      Just edit the msg.h file located Arduino/libraries/Rosserial_Arduino_Library/src/ros in line 40  
      write #include <string.h> and in line 68 and 182 remove std:: before memcpy  
      Then restart Arudino  
