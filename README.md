@@ -17,7 +17,7 @@ Subscribing to IR sensor connected to Arduino using `rosserial`, Topic `chatter`
 Arduino code is present in:  
 #### ir_publisher.ino  
 
-### TESTED ON :  
+### Requirements :  
 ROS Noetic  
 Ubuntu 20.04  
 Arduino 1.8  
@@ -28,7 +28,13 @@ Arduino 1.8
 2) git clone this repo
 3) Perform a `catkin_make` inside the catkin_ws directory
 4) Connect IR to arduino UNO and UNO to System. Make sure it is connected by typing `ll /dev/ttyACM0`, if its not present there, please look up on the internet.
-5) 
+5) Install the code in .ino file on your Arduino
+6) If all the above steps are done correctly, you can simple run the script
+   ```bash run_ir_turtle.sh```
+   
+Now you can see a result similar to the video below:  
+### Video
+
 
 ### STEP TO MAKE THIS PROJECT:  
 
