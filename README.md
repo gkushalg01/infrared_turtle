@@ -8,26 +8,27 @@ I was asked by my senior to combine arduino, IR sensor and ROS in one project. S
 
 ## details.  
 
-THIS PROGRAM PUBLISHES TO cmd_vel, CAUSING A VIRTUAL TURTLE TO MOVE RANDOMLY IN ANY DIRECTION,  
-IT STOPS THE TURTLE (VIRTUALLY ON SCREEN) WHENEVER THE IR SENSOR (PHYSICALLY CONNECTED TO ARDUINO -> PC -> ROS) ENCOUNTERS AN OBSTACLE PHYSICALLY  
+This program publishes to `cmd_vel`, Causing a virtual turtle to move randomly in any direction,  
+It stops the turtle (virtually on screen) whenever the IR sensor (physically connected to Arduino -> PC -> ROS) Encounters an obstacle physically.  
 
-PUBLISHING RANDOM TWISTS TO turtle1/cmd_vel  
-SUBSCRIBING TO IR SENSOR CONNECTED TO ARDUINO USING rosserial, TOPIC chatter  
+Publishing random twists to `turtle1/cmd_vel`  
+Subscribing to IR sensor connected to Arduino using `rosserial`, Topic `chatter`  
 
-ARDUINO CODE IS PRESENT IN :  
+Arduino code is present in:  
 #### ir_publisher.ino  
 
 ### TESTED ON :  
-ROS NOETIC  
-UBUNTU 20.04  
-ARDUINO 1.8  
+ROS Noetic  
+Ubuntu 20.04  
+Arduino 1.8  
 
 ## how to run?  
 
 1) Install the above system
 2) git clone this repo
 3) Perform a `catkin_make` inside the catkin_ws directory
-4) Connect IR to arduino UNO and UNO to System. Make sure it is connected by typing `
+4) Connect IR to arduino UNO and UNO to System. Make sure it is connected by typing `ll /dev/ttyACM0`, if its not present there, please look up on the internet.
+5) 
 
 ### STEP TO MAKE THIS PROJECT:  
 
