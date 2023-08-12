@@ -17,4 +17,4 @@ add_executable(
     ir_turtle_node
     src/ir_turtle_node.cpp
 )
-target_link_libraries(pub_turtle_sub_arduino ${catkin_LIBRARIES})
+target_link_libraries(ir_turtle_node ${catkin_LIBRARIES})
