@@ -27,7 +27,7 @@ Arduino 1.8
 1) Install the above system Requirements
 2) Clone this git repo
 3) Perform a `catkin_make` inside the catkin_ws directory
-4) Connect IR to Arduino UNO to System. Make sure it is connected by typing `ll /dev/ttyACM0`, if its not present there, please look up on the internet.
+4) Connect IR to Arduino UNO to System. Make sure it is connected by typing `ll /dev/ttyACM0(or /dev/ttyS0)`, if its not present there, please look up on the internet.
 5) Install the code in .ino file on your Arduino
 6) If all the above steps are done correctly, you can simple run the script
    ```bash run_ir_turtle.sh```
@@ -39,8 +39,8 @@ Arduino 1.8
 
 1) Connect IR to arduino UNO and UNO to System.  
 ```
-ll /dev/ttyACM0  
-sudo chmod a+rw /dev/ttyACM0  
+ll /dev/ttyACM0(or /dev/ttyS0)  
+sudo chmod a+rw /dev/ttyACM0(or /dev/ttyS0)  
 ```
 IR Pin number used in this case is 4.  
 ( a ) Copy the code in ir_publisher.ino & Feed the code in ir_publisher.ino to Arduino.  
@@ -76,7 +76,7 @@ catkin_make
 ```
 roscore  
 rosrun turtlesim turtlesim_node  
-rosrun rosserial_python serial_node.py /dev/ttyACM0  
+rosrun rosserial_python serial_node.py /dev/ttyACM0(or /dev/ttyS0)  
 rosrun ir_turtle pub_turtle_sub_arduino  
 ```
 
@@ -87,6 +87,22 @@ Now you can Play with the IR.
 ### Errors 
 #### cstring: No such file or directory
 Solution-
+(Running on melodic)
 code /home/$USER/Arduino/libraries/Rosserial_Arduino_Library/src/ros/msg.h
-
 Replace 'std::memcpy' with 'memcpy'
+
+Or just install 0.7.9 version of the library, it works.
+
+#### An error occurred while uploading the sketch avrdude: ser_open(): can't open device "/dev/ttyS0": Permission denied
+sudo chmod a+rw /dev/ttyACM0
+
+#### avrdude: stk500_recv(): programmer is not responding avrdude: stk500_getsync() attempt 1 of 10: not in sync: resp=0x00
+https://arduino.stackexchange.com/questions/17/avrdude-stk500-getsync-not-in-sync-resp-0x00-aka-some-dude-named-avr-won
+Disconnect and reconnect the USB cable.
+Press the reset button on the board.
+Restart the Arduino IDE.
+
+Or just reconnect Arduino USB to another port on PC, worked for me.
+
+#### ERROR: cannot launch node of type [rosserial_python/serial_node.py]: rosserial_python
+sudo apt-get install ros-melodic-rosserial-arduino ros-melodic-rosserial
