@@ -9,6 +9,6 @@
         <param name="port" value="/dev/ttyACM0"/>
     </node>
 
-    <node name="ir_turtle" pkg="ir_turtle" type="pub_turtle_sub_arduino"></node>
+    <node name="ir_turtle" pkg="ir_turtle" type="ir_turtle_node"></node>
 
 </launch>
