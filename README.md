@@ -81,3 +81,12 @@ rosrun ir_turtle pub_turtle_sub_arduino
 ```
 
 Now you can Play with the IR.  
+
+
+
+### Errors 
+#### cstring: No such file or directory
+Solution-
+code /home/$USER/Arduino/libraries/Rosserial_Arduino_Library/src/ros/msg.h
+
+Replace 'std::memcpy' with 'memcpy'
