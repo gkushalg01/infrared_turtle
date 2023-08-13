@@ -33,7 +33,7 @@ Arduino 1.8
    ```bash run_ir_turtle.sh```
    
 ### Video
-(to be uploaded)
+https://youtu.be/PUyrIXgBTew
 
 ### STEP TO MAKE THIS PROJECT:  
 
