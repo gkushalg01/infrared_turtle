@@ -1,5 +1,8 @@
 # infrared_turtle
-
+  
+## video 
+https://www.youtube.com/watch?v=PUyrIXgBTew
+  
 ## what?
 This repository contains a ROS turtle that moves randomly when IR sensor is not detecting anything and stops when IR sensor detects something.  
 
